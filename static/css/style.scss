@@ -1,0 +1,95 @@
+$primary-color: #093f1b;
+$primary-color-dark: #062c13;
+$secondary-color: rgba(68, 68, 68, 0.911);
+
+body {
+  overflow-x: hidden;
+
+  font-family: "Patrick Hand", cursive;
+}
+
+.btn-primary {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+}
+
+.btn-primary:hover {
+  background-color: $primary-color-dark !important;
+  border-color: $primary-color-dark !important;
+}
+
+.btn-primary:focus {
+  box-shadow: none !important;
+}
+
+.navbar {
+  &.bg-success {
+    background-color: $primary-color !important;
+  }
+}
+
+.divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+path {
+  fill: #fff;
+}
+
+.quote-section {
+  background: black;
+}
+
+blockquote {
+  font-family: "Caveat", cursive;
+  text-indent: 23px;
+  color: $secondary-color;
+
+  p {
+    font-size: 2rem;
+    display: block;
+    color: white;
+  }
+}
+
+.jumbotron {
+  color: $primary-color;
+  background: #fdfdfd;
+  i.fa-info-circle {
+    font-size: 50px;
+  }
+}
+
+.fa-quote-left,
+.fa-quote-right {
+  color: $secondary-color;
+  display: inline;
+}
+
+.card {
+  border-radius: 50%;
+  text-align: center;
+  background: whitesmoke;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}

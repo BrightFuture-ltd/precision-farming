@@ -1,154 +1,218 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 
 {% block nav %}
-<li><a href="index.html" class="active">Home</a></li>
-<li><a href="CropRecommendation.html">Crop</a></li>
-<li><a href="FertilizerRecommendation.html">Fertilizer</a></li>
-<li><a href="PesticideRecommendation.html">Pesticide</a></li>
+<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link " href="CropRecommendation.html">Crop</a></li>
+<li class="nav-item"><a class="nav-link " href="FertilizerRecommendation.html">Fertilizer</a></li>
+<li class="nav-item"><a class="nav-link" href="PesticideRecommendation.html">Pesticide</a></li>
 {% endblock %}
 
 {% block body %}
-<section class="tm-welcome-section">
-    <div class="container tm-position-relative">
-      <div class="tm-lights-container">
-        <img src="{{ url_for('static', filename='img/light.png') }}" alt="Light" class="light light-1" height="188px" width="200px">
-        <img src="{{ url_for('static', filename='img/light.png') }}" alt="Light" class="light light-2" height="188px" width="200px">
-        <img src="{{ url_for('static', filename='img/light.png') }}" alt="Light" class="light light-3" height="188px" width="200px">
-        <br>
-      </div>
-      <div class="row tm-welcome-content">
-        <br><br>
-        <h2 class="white-text tm-handwriting-font tm-welcome-header">
-          <img src="{{ url_for('static', filename='img/header-line.png') }}" alt="Line"
-            class="tm-header-line">&nbsp;Welcome To&nbsp;&nbsp;<img src="{{ url_for('static', filename='img/header-line.png') }}" alt="Line"
-            class="tm-header-line"></h2>
-        <h2 class="gold-text tm-welcome-header-2">PreciiTech</h2>
-        <p class="gray-text tm-welcome-description"><span
-            class="gold-text">Farm = AI + Crop + Fertilizer + Pesticide.</span> We take of your soil's health. We at <span class="gold-text">
-          PreciiTech</span>, honor <span
-                class="gold-text">the Indian Farmer's love, hard work and character.</span>
-          They help to feed a nation whose population is nearly 1.4 billion.
-          However their productivity is threatened by some natural factors that can ruin their crops and their livelihoods.
-          PreciiTech is a small initiative enhancing agriculture, make smart decisions to consider
-        the demographics of your field, the factors affecting your crop, as well as how to
-        keep them healthy for a super awesome yield.</p>
-        <br><br><br>
-      </div>
-      <img src="{{ url_for('static', filename='img/table-set.jpeg') }}" alt="Table Set" class="tm-table-set img-responsive" width="100%">
+<!-- slideshow -->
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-  </section>
-  <div class="tm-main-section light-gray-bg">
-    <div class="container" id="main">
-      <section class="tm-section tm-section-margin-bottom-0 row">
-        <div class="col-lg-12 tm-section-header-container">
-          <h2 class="tm-section-header gold-text tm-handwriting-font">Our Services</h2>
-          <div class="tm-hr-container">
-            <hr class="tm-hr">
-          </div>
+    <div class="carousel-inner">
+        <div class="carousel-item dark active">
+            <img src="{{ url_for('static', filename='imgs/image1.jpg') }}" class="d-block w-100" alt="grandma at work" />
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Subsistence farming with AI.</h1>
+                    <p>
+                        Let's help grandma with informed and precise farming decisions
+                        with AI technologies.
+                    </p>
+                    <p>
+                        <a class="btn btn-lg btn-primary" href="#solutions">Get Started now</a>
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-12 tm-popular-items-container">
-          <div class="tm-popular-item">
-            <img src="{{ url_for('static', filename='img/popular-2.jpg') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
-            <div class="tm-popular-item-description">
-              <h3 class="tm-handwriting-font tm-popular-item-title"><span
-                  class="tm-handwriting-font bigger-first-letter">C</span>rop Recommendation</h3>
-              <hr class="tm-popular-item-hr">
-              <p>Which crop to grow, that is ideally suited to conditions?
-                Make an informed decision before starting the cultivation of crops.</p>
-              <div class="order-now-container">
-                <a href="CropRecommendation.html" class="order-now-link tm-handwriting-font">Proceed Now</a>
-              </div>
+        <div class="carousel-item dark">
+            <img src="{{ url_for('static', filename='imgs/image2.jpg') }}" class="d-block w-100" alt="uncle at work" />
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Digital technology in Agriculture.</h1>
+                    <p>
+                        Digital technology holds promise to dramatically enhance
+                        smallholder productivity
+                    </p>
+                    <p>
+                        <a class="btn btn-lg btn-primary"
+                            href="https://www.brookings.edu/blog/africa-in-focus/2021/08/16/digital-technology-and-african-smallholder-agriculture-implications-for-public-policy/">Learn
+                            more</a>
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="tm-popular-item">
-            <img src="{{ url_for('static', filename='img/popular-3.jpg') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
-            <div class="tm-popular-item-description">
-              <h3 class="tm-handwriting-font tm-popular-item-title"><span
-                  class="tm-handwriting-font bigger-first-letter">F</span>ertilizer Recommendation</h3>
-              <hr class="tm-popular-item-hr">
-              <p>Which fertilizer to choose for the cultivated soil and prescribed crop for optimum production?
-              Provide your crops, the essential nutrients.</p>
-              <div class="order-now-container">
-                <a href="FertilizerRecommendation.html" class="order-now-link tm-handwriting-font">Proceed Now</a>
-              </div>
-            </div>
-          </div>
-          <div class="tm-popular-item">
-            <img src="{{ url_for('static', filename='img/popular-1.jpg') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
-            <div class="tm-popular-item-description">
-              <h3 class="tm-handwriting-font tm-popular-item-title"><span
-                  class="tm-handwriting-font bigger-first-letter">P</span>esticide Recommendation</h3>
-              <hr class="tm-popular-item-hr">
-              <p>Pests are a big threat.
-                Use PreciiTech to know which pesticide to use to control pests before they cause potential damage to your
-                crop?</p>
-              <div class="order-now-container">
-                <a href="PesticideRecommendation.html" class="order-now-link tm-handwriting-font">Proceed Now</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+        <div class="carousel-item dark">
+            <img src="{{ url_for('static', filename='imgs/image3.jpg') }}" class="d-block w-100" alt="brother at work" />
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One more reason to step up African Agriculture.</h1>
+                    <p>
+                        Roughly 65 percent of Africa's population relies on
+                        subsistence farming.
+                    </p>
+                    <p>
+                        <a class="btn btn-lg btn-primary" href="#solutions">Get Started now</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
-<footer>
-    <div class="tm-black-bg">
-      <div class="container">
-        <div class="row margin-bottom-60">
-          <nav class="col-lg-3 col-md-3 tm-footer-nav tm-footer-div">
-            <h3 class="tm-footer-div-title">Our Team</h3>
-            <ul>
-              <li>Simran</li>
-              <li>Mehak Puri</li>
-            </ul>
-          </nav>
-          <div class="col-lg-5 col-md-5 tm-footer-div">
-            <h3 class="tm-footer-div-title">Few words for our Indian Farmers</h3>
-            <p class="margin-top-15" align="justify">For this one farmer the worries are over, lie down and rest your head,
-              Your time has been and struggles enough, put the tractor in the shed.</p>
+<!-- quote -->
+<div class="row quote-section">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 py-3">
+        <figure class="">
+            <span class="d-flex align-items-center justify-content-center py-3">
+                <i class="fa fa-quote-left mb-3"></i>
+                <blockquote class="blockquote">
+                    <p class="me-3 mb-0 text-center">
+                        If we get Agriculture right in Africa, where most of the
+                        people now are working in that sector, not only would it help
+                        boost development but we will be secure in terms of food and
+                        nutrition and then be able to move on to other areas.
+                    </p>
+                </blockquote>
+                <i class="fa fa-quote-right mb-3"></i>
+            </span>
 
-             <p class="margin-top-15" align="justify"> Years were not easy, many downright hard, but your faith in God transcended,
-               Put away your tools and sleep in peace. The fences have all been mended.</p>
+            <figcaption class="blockquote-footer text-center">
+                by <cite title="Source Title">Koffi Annan</cite>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-md-2"></div>
+</div>
 
-              <p class="margin-top-15" align="justify">You raised a fine family, worked the land well and always followed the Son,
-                Hang up your shovel inside of the barn; your work here on earth is done.</p>
+<!-- Jumbotron -->
+<div class="p-5 mb-4 bg-light rounded-3 jumbotron">
+    <div class="container-fluid py-4">
+        <h1 class="display-5 fw-bold">What is PreciiTech?</h1>
+        <div class="d-flex justify-content-between">
+            <p class="col-md-8 fs-4">
+                PreciiTech is a technology solution for precision farming in
+                Africa. It aims to provide farmers with AI enabled technology that
+                enhances their productivity in the
+                <b>Subsistence farming</b> sector. It's presently focuses on
+                enhancing precision <i>Crop</i> and <i>Animal</i> production.
+            </p>
 
-              <p class="margin-top-15" align="justify">A faith few possess led your journey through life, often a jagged and stony way,
-                The sun is setting, the cattle are all bedded, and here now is the end of your day.</p>
-
-              <p class="margin-top-15" align="justify">Your love of God’s soil has passed on to your kin; the stories flow like fine wine,
-                Wash off your work boots in the puddle left by blessed rain one final time.</p>
-
-              <p class="margin-top-15" align="justify">You always believed that the good Lord would provide and He always had somehow,
-                Take off your gloves and put them down, no more sweat and worry for you now.</p>
-
-              <p class="margin-top-15" align="justify">Your labor is done, your home now is heaven; no more must you wait,
-              Your legacy lives on, your love of the land, and we will close the gate.</p>
-          </div>
-          <div class="col-lg-4 col-md-4 tm-footer-div">
-            <h3 class="tm-footer-div-title">Connect With Us</h3>
-            <!-- Simran -->
-            Simran &nbsp;
-              <a href="https://www.linkedin.com/in/simran-volunesia/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-              <a href="https://www.youtube.com/c/ConceptsInDepthAndEasy" class="tm-social-icon"><i class="fa fa-youtube"></i></a>
-              <a href="https://medium.com/@simran17102004" class="tm-social-icon"><i class="fa fa-medium"></i></a>
-              <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
-              <!-- Mehak -->
-            <br><br>Mehak &nbsp;
-              <a href="https://www.linkedin.com/in/mehak-puri-9b058414b/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <div class="my-auto mx-5">
+                <img src="{{ url_for('static', filename='imgs/logo2.gif') }}" class="img-fluid" alt="" />
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div>
-      <div class="container">
-        <div class="row tm-copyright">
-          <p class="col-lg-12 small copyright-text text-center">Copyright &copy; 2021 Simran & Mehak</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 
+        <!-- <button class="btn btn-primary btn-lg" type="button">
+            Get Started Now
+          </button> -->
+    </div>
+</div>
+
+<!-- options -->
+<div id="solutions" class="container">
+    <div class="row py-5 mb-5">
+        <div class="col-md-12">
+            <div class="row mt-n5">
+                <div class="col-md-4 py-0">
+                    <hr />
+                </div>
+                <div class="col-md-4 py-0">
+                    <h3 class="text-center">Our Solutions</h3>
+                </div>
+                <div class="col-md-4 py-0">
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row py-5">
+                <div class="col-sm-6 px-5">
+                    <div class="card py-3 shadow-sm border-0">
+                        <img src="{{ url_for('static', filename='imgs/logo.png') }}" class="img-fluid mx-auto" height="150px" width="100px" alt="..." />
+                        <div class="card-body pt-1 pb-4">
+                            <h5 class="card-title">Precision Crop Production</h5>
+                            <p class="card-text px-4">
+                                Get informed measures for effective crop production in
+                                less than no time.
+                            </p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#selectionModal">
+                                Check it Out!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 px-5">
+                    <div class="card py-3 border-0 shadow-sm">
+                        <img src="{{ url_for('static', filename='imgs/logo.png') }}" class="img-fluid mx-auto" height="150px" width="100px" alt="..." />
+                        <div class="card-body pt-1 pb-4">
+                            <h5 class="card-title">Precision Animal Production</h5>
+                            <p class="card-text px-4">
+                                Get informed decisions for effective animal rearing in
+                                less than no time.
+                            </p>
+                            <a href="#" class="btn btn-primary">Check it Out!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal modal-fade" tabindex="-1" role="dialog" id="selectionModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-6 shadow">
+            <div class="modal-body p-5">
+                <h2 class="fw-bold mb-0">Select your Interest</h2>
+
+                <div class="d-grid gap-4 my-5 list-group">
+                    <a href="#" class="d-flex gap-4 list-group-item list-group-item-action" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="For informed crop cultivation">
+                        <img src="{{ url_for('static', filename='imgs/crop-icon.png') }}" class="img-fluid py-3" alt="" />
+                        <div>
+                            <h5 class="mb-2">Crop Cultivation</h5>
+                            Get informed on the crop you want to grow on your farm.
+                        </div>
+                    </a>
+                    <a href="#" class="d-flex gap-4 list-group-item list-group-item-action">
+                        <img src="{{ url_for('static', filename='imgs/soil-icon.png') }}" class="img-fluid py-3" alt="" />
+                        <div>
+                            <h5 class="mb-2">Fertilizer Info</h5>
+                            Get informed on the best fertilizer needed for optimal
+                            production.
+                        </div>
+                    </a>
+                    <a href="#" class="d-flex gap-4 list-group-item list-group-item-action">
+                        <img src="{{ url_for('static', filename='imgs/pest-icon.png') }}" class="img-fluid py-3" alt="" />
+                        <div>
+                            <h5 class="mb-2">Pesticide Info</h5>
+                            Get informed on the best pesticide to use to manage pests
+                            for your crop.
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
