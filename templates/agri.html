@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<nav>
+						<ul class="nav navbar-nav link-effect-5" id="link-effect-5">
+							<li class="active"><a href="index.html" data-hover="Home">Home</a></li>
+							<li><a href="CropRecommendation.html" data-hover="Crop">Crop</a></li>
+							<li><a href="FertilizerRecommendation.html" data-hover="Fertilizer">Fertilizer</a></li>
+							<li><a href="PesticideRecommendation.html" data-hover="Pesticide">Pesticide</a></li>
+						</ul>
+						<div class="w3_social_icons">
+							<ul class="w3layouts_social">
+								<li><a href="#" class="w3l_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" class="w3l_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								<li><a href="#" class="w3l_instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</nav>
+{% endblock %}
+
+{% block body %}
+
+ <div class="team">
+		<div class="container">
+			<p class="w3ls_para">P.A.S.A.R</p>
+
+			<div class="agileinfo_team_grids">
+				<div class="col-md-4 agileinfo_team_grid">
+					<img src="static/img/popular-2.jpg" alt=" " class="img-responsive" />
+					<div class="wthree_team_grid">
+						<h4>Crop Recommendation</h4>
+						<p>Want to make an informed decision before starting cultivating crops?</p>
+						<p></p>
+                      <button onclick="window.location.href='CropRecommendation.html'"  style="color: white; font-weight: bold;
+         background-color: #87b200;
+         width: 130px; height:50px; border-radius:12px; font-size: 21px;">
+                        Proceed
+                      </button>
+					</div>
+				</div>
+				<div class="col-md-4 agileinfo_team_grid">
+					<img src="static/img/popular-3.jpg" alt=" " class="img-responsive" />
+					<div class="wthree_team_grid">
+						<h4>Fertilizer Recommendation</h4>
+						<p>Want to provide your crops with the essential nutrients for optimum production?</p>
+						<p></p>
+                       <button  onclick="window.location.href='FertilizerRecommendation.html'"  style="color: white; font-weight: bold;
+         background-color: #87b200;
+         width: 130px; height:50px; border-radius:12px; font-size: 21px;">
+                        Proceed
+                      </button>
+					</div>
+				</div>
+				<div class="col-md-4 agileinfo_team_grid">
+					<img src="static/img/popular-1.jpg" alt=" " class="img-responsive" />
+					<div class="wthree_team_grid">
+						<h4>Pesticide Recommendation</h4>
+						<p>Want to control pests before they cause a major damage to your crops?</p>
+						<p>  </p>
+                       <button onclick="window.location.href='PesticideRecommendation.html'"  style="color: white; font-weight: bold;
+         background-color: #87b200;
+         width: 130px; height:50px; border-radius:12px; font-size: 21px;">
+                        Proceed
+                      </button>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

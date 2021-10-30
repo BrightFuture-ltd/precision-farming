@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<nav>
+						<ul class="nav navbar-nav link-effect-5" id="link-effect-5">
+							<li><a href="index.html" data-hover="Home">Home</a></li>
+							<li class="active"><a href="FeedingRecommendation.html" data-hover="Crop">Feeding&Habitat</a></li>
+							<li><a href="BreedingRecommendation.html" data-hover="Fertilizer">Breeding</a></li>
+							<li><a href="HealthRecommendation.html" data-hover="Pesticide">Health</a></li>
+						</ul>
+						<div class="w3_social_icons">
+							<ul class="w3layouts_social">
+								<li><a href="#" class="w3l_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" class="w3l_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								<li><a href="#" class="w3l_instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</nav>
+{% endblock %}
+
+{% block body %}
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Get informed advice on food and habitat of animals you want to grow</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 40rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{url_for('feeding_recommend')}}">
+    <div class="form-group">
+
+    <div class="form-group">
+      <label for="specie" style="font-size: 17px"
+        ><b>Specie you want to grow</b></label>
+      <select
+        name="specie"
+        class="form-control"
+        id="specie"
+        placeholder="Select a specie"
+        style="font-weight: bold"
+        required
+      >
+        <option selected>Goats</option>
+        <option>Chicken</option>
+        <option>Hen</option>
+        <option>Pigs</option>
+      </select>
+    </div>
+     <div class="form-group">
+      <label for="weight" style="font-size: 17px"><b>Weight(Kg)</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="weight"
+        name="weight"
+        max="100"
+        min="0"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+
+    <div class="d-flex justify-content-center">
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      <button type="submit"
+        style="color: white; font-weight: bold;
+         background-color: #87b200;
+         width: 130px; height:50px; border-radius:12px; font-size: 21px;">
+        ok
+      </button>
+    </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<nav>
+						<ul class="nav navbar-nav link-effect-5" id="link-effect-5">
+							<li><a href="index.html" data-hover="Home">Home</a></li>
+							<li class="active"><a href="FeedingRecommendation.html" data-hover="Crop">Feeding&Habitat</a></li>
+							<li><a href="BreedingRecommendation.html" data-hover="Fertilizer">Breeding</a></li>
+							<li><a href="HealthRecommendation.html" data-hover="Pesticide">Health</a></li>
+						</ul>
+						<div class="w3_social_icons">
+							<ul class="w3layouts_social">
+								<li><a href="#" class="w3l_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" class="w3l_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								<li><a href="#" class="w3l_instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</nav>
+{% endblock %}
+
+{% block body %}
+<div style = "padding-top: 5%; padding-bottom: 5%; padding-left: 15%;padding-right: 15%;">
+              <p style="color: #87b200; font-size: 20px; font-family: 'Recursive', sans-serif;">
+                  Feeding and Habitat for {{ animal_name }}</p>
+              <p style="color: black; font-size: 20px; font-family: 'Recursive', sans-serif;">{{ recommendation }}</p>
+
+</div>
+{% endblock %}

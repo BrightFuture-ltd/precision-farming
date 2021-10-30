@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<nav>
+						<ul class="nav navbar-nav link-effect-5" id="link-effect-5">
+							<li><a href="index.html" data-hover="Home">Home</a></li>
+							<li><a href="CropRecommendation.html" data-hover="Crop">Crop</a></li>
+							<li><a href="FertilizerRecommendation.html" data-hover="Fertilizer">Fertilizer</a></li>
+							<li  class="active"><a href="PesticideRecommendation.html" data-hover="Pesticide">Pesticide</a></li>
+						</ul>
+						<div class="w3_social_icons">
+							<ul class="w3layouts_social">
+								<li><a href="#" class="w3l_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" class="w3l_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								<li><a href="#" class="w3l_instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</nav>
+{% endblock %}
+
+{% block body %}
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Recommended pesticide based on pest</b>
+</h2>
+<h3 align="center">Please upload the picture which clearly shows the pest,<br>
+            so that we can recommend you, the pesticide accordingly!</h3>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 40rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+    <section>
+            <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+                <input type="file" name="image" class="upload" style="font-size: 15px;">
+                <br>
+                <input type="submit" value="Predict" style="color: white; font-weight: bold;
+                background-color: #87b200;
+                width: 130px; height:50px; border-radius:12px; font-size: 21px;">
+            </form>
+    </section>
+</div>
+{% endblock %}
