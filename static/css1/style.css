@@ -43,6 +43,16 @@ input[type="submit"],input[type="reset"],.w3_agileits_mail_left1 a,.w3_more a,.w
 	min-height:700px;
 	position: relative;
 }
+.banner1:before {
+    content: '';
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000 !important;
+    opacity: .6; 
+}
 .banner1{
 	background: url(../images/banner.jpg) no-repeat 0px -200px;
     background-size: cover;
@@ -51,6 +61,7 @@ input[type="submit"],input[type="reset"],.w3_agileits_mail_left1 a,.w3_more a,.w
     -o-background-size: cover;
     -ms-background-size: cover;
     min-height: 325px;
+    position: relative;
 }
 /*-- nav --*/
 .navbar {

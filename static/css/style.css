@@ -1219,6 +1219,19 @@ figure.effect-julia:hover p {
 	-moz-opacity: 0;
 	filter: alpha(opacity=0);
 }
+.banner {
+    position: relative !important;
+}
+.banner:before {
+    content: '';
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000 !important;
+    opacity: .6; 
+}
 /*-- //to-top --*/
 /*-----start-responsive-design------*/
 @media (max-width:1680px){
@@ -1233,7 +1246,8 @@ figure.effect-julia:hover p {
 }
 @media (max-width:1440px){
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -120px 0px;
+		/* background: url(../images/banner.jpg) no-repeat -120px 0px; */
+		background: url(../images/banner.jpg) no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -1294,7 +1308,8 @@ figure.effect-julia:hover p {
 		width: 68%;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -245px 0px;
+		/* background: url(../images/banner.jpg) no-repeat -245px 0px; */
+		background: url(../images/banner.jpg) no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -1740,7 +1755,8 @@ figure.effect-julia:hover p {
 	}
 	.banner {
 		min-height: 455px;
-		background: url(../images/banner.jpg) no-repeat -220px 0px;
+		/* background: url(../images/banner.jpg) no-repeat -220px 0px; */
+		background: url(../images/banner.jpg) no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -1805,7 +1821,8 @@ figure.effect-julia:hover p {
 		margin: 1em 0 0 10em;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -270px 0px;
+		/* background: url(../images/banner.jpg) no-repeat -270px 0px; */
+		background: url(../images/banner.jpg) no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -1880,7 +1897,8 @@ figure.effect-julia:hover p {
 		margin: 5em 0 0;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -235px 0px;
+		/* background: url(../images/banner.jpg) no-repeat -235px 0px; */
+		background: url(../images/banner.jpg) no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -1957,7 +1975,8 @@ figure.effect-julia:hover p {
 		font-size: 13px;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -199px 0px;
+		/* background: url(../images/banner.jpg) no-repeat -199px 0px; */
+		background: url(../images/banner.jpg) no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
